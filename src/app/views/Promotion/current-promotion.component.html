@@ -1,0 +1,77 @@
+<div class="card">
+    <table class="table table-responsive-sm table-hover table-outline mb-0">
+        <thead class="thead-light">
+            <tr>
+            <th class="text-center"></th>
+            <th>Article</th>
+            <th>Prix</th>
+            <th>Prix Promo</th>
+            <th>Réduction</th>
+            <th>Du</th>
+            <th>Au</th>
+            <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="text-center">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" value="true">
+                        </label>
+                    </div>
+                </td>
+                <td>
+                    <div>xxx</div>
+                    <div class="small text-muted">
+                    <span>Nouveau</span> | Ajouté le : 01/01/2019
+                    </div>
+                </td>
+                <td>
+                    xxx DT
+                </td>
+                <td>
+                    xxx DT
+                </td>
+                <td>
+                    xx%
+                </td>
+                <td>
+                    01/01/2019
+                </td>
+                <td>
+                    01/01/2019
+                </td>
+                <td>
+                    <div>
+                        <button type="button" class="btn btn-block btn-danger" data-toggle="modal" (click)="Delete.show()">Terminer La Promo</button>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+            
+        </tbody>
+    </table>
+</div>
+
+<div bsModal #Delete="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Terminer la Promotion</h4>
+                <button type="button" class="close" (click)="Delete.hide()" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="card-body">
+                    <label>Vous-êtes sûr de vouloir terminer cette promotion sur cet article ?</label>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" (click)="Delete.hide()">Annuler</button>
+                <button type="button" class="btn btn-success">Confirmer</button>
+            </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
